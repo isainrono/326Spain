@@ -20,6 +20,7 @@
 		9E59255B2203559200185736 /* TableViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59255A2203559200185736 /* TableViewCellCustom.swift */; };
 		9ED0451F22035CBD00508558 /* ViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */; };
 		9ED045212203635800508558 /* TableViewCellSeassonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */; };
+		C17BA305220A158000A13083 /* ViewControllerSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17BA304220A158000A13083 /* ViewControllerSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9E59255A2203559200185736 /* TableViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCustom.swift; sourceTree = "<group>"; };
 		9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDetail.swift; sourceTree = "<group>"; };
 		9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSeassonCustom.swift; sourceTree = "<group>"; };
+		C17BA304220A158000A13083 /* ViewControllerSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				9E59255A2203559200185736 /* TableViewCellCustom.swift */,
 				9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */,
 				9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */,
+				C17BA304220A158000A13083 /* ViewControllerSearch.swift */,
 			);
 			path = 326Spain;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E592557220350D600185736 /* Season.swift in Sources */,
+				C17BA305220A158000A13083 /* ViewControllerSearch.swift in Sources */,
 				9ED0451F22035CBD00508558 /* ViewControllerDetail.swift in Sources */,
 				9ED045212203635800508558 /* TableViewCellSeassonCustom.swift in Sources */,
 				9E592529220345B000185736 /* ViewController.swift in Sources */,
