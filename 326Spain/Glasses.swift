@@ -24,4 +24,8 @@ class Glasses {
         self.price = price
         self.glassImage = glassImage;
     }
+    
+    func setIsLiked(isLiked:Bool){
+        self.isLiked = isLiked
+    }
 }
