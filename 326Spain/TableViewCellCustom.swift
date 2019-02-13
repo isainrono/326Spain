@@ -12,6 +12,7 @@ class TableViewCellCustom: UITableViewCell {
 
     @IBOutlet weak var seassonImg: UIImageView!
     @IBOutlet weak var seassonName: UILabel!
+    @IBOutlet weak var seassonLike: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

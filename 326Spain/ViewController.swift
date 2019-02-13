@@ -66,11 +66,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let seassonCell = tableViewHome.dequeueReusableCell(withIdentifier: "seassonCell", for:indexPath) as! TableViewCellCustom
-        
+        tableView.reloadData()
         seassonCell.seassonImg.image = seassonList[indexPath.row].image
         seassonCell.seassonName.text = seassonList[indexPath.row].title
+        seassonCell.seassonLike.tag = indexPath.row
+        seassonCell.seassonLike.addTarget(self, action: #selector(clickHeart), for: .touchUpInside)
         
         return seassonCell
+    }
+    
+    @objc func clickHeart(sender:UIButton) -> Int{
+        print("tocado el boton\(sender.tag)")
+        
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

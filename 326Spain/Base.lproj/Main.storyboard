@@ -23,19 +23,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seassonCell" rowHeight="333" id="q7M-hJ-aHI" customClass="TableViewCellCustom" customModule="_26Spain" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="138" height="333"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seassonCell" rowHeight="333" id="q7M-hJ-aHI" customClass="TableViewCellCustom" customModule="_26Spain" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="333"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q7M-hJ-aHI" id="QXW-vf-dMS">
-                                            <rect key="frame" x="0.0" y="0.0" width="138" height="332.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="332.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-0G-2dW">
+                                                    <rect key="frame" x="330" y="259" width="28" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="uLike"/>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCE-kw-Ndm">
-                                                    <rect key="frame" x="6" y="23" width="118" height="229"/>
+                                                    <rect key="frame" x="30" y="23" width="354" height="228"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0l-tX-97A">
-                                                    <rect key="frame" x="14" y="252" width="55" height="40"/>
+                                                    <rect key="frame" x="52" y="251" width="165" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -45,6 +50,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="seassonImg" destination="BCE-kw-Ndm" id="OXu-vr-0on"/>
+                                            <outlet property="seassonLike" destination="eBI-0G-2dW" id="bEq-Xl-Ukr"/>
                                             <outlet property="seassonName" destination="B0l-tX-97A" id="2U8-om-StN"/>
                                         </connections>
                                     </tableViewCell>
@@ -61,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1798.5507246376812" y="133.25892857142856"/>
         </scene>
         <!--View Controller Detail-->
         <scene sceneID="re3-Pj-jN2">
@@ -329,5 +335,6 @@
     </scenes>
     <resources>
         <image name="like" width="32" height="32"/>
+        <image name="uLike" width="24" height="24"/>
     </resources>
 </document>
