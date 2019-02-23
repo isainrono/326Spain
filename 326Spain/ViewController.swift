@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewHome: UITableView!
+    // lista de temporadas favoritas
+    var favoriteList:[Season] = [Season]()
     
     // lista de gafas generica
     var gList:[Glasses] = [
@@ -66,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let seassonCell = tableViewHome.dequeueReusableCell(withIdentifier: "seassonCell", for:indexPath) as! TableViewCellCustom
-        tableView.reloadData()
+        
         seassonCell.seassonImg.image = seassonList[indexPath.row].image
         seassonCell.seassonName.text = seassonList[indexPath.row].title
         seassonCell.seassonLike.tag = indexPath.row
@@ -77,6 +79,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @objc func clickHeart(sender:UIButton) -> Int{
         print("tocado el boton\(sender.tag)")
+        
+        if sender.image(for: .normal) == UIImage(named: "uLike") {
+            sender.setImage(UIImage(named: "hLike"), for: .normal)
+            favoriteList.append(seassonList[sender.tag])
+        } else {
+            sender.setImage(UIImage(named: "uLike"), for: .normal)
+            // Falta eliminara de lista de favoritos
+        }
         
         return 1
     }
