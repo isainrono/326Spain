@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02C58BB8222593D4003745F1 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C58BB7222593D4003745F1 /* AppController.swift */; };
+		02C58BBA22259C12003745F1 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C58BB922259C12003745F1 /* AppModel.swift */; };
+		02C58BBD2225BD71003745F1 /* SeasonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C58BBC2225BD71003745F1 /* SeasonController.swift */; };
 		9E592527220345B000185736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592526220345B000185736 /* AppDelegate.swift */; };
 		9E592529220345B000185736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592528220345B000185736 /* ViewController.swift */; };
 		9E59252C220345B000185736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E59252A220345B000185736 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C58BB7222593D4003745F1 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		02C58BB922259C12003745F1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		02C58BBC2225BD71003745F1 /* SeasonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonController.swift; sourceTree = "<group>"; };
 		9E592523220345B000185736 /* 326Spain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 326Spain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E592526220345B000185736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E592528220345B000185736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C58BB322259296003745F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9E592558220351B000185736 /* Glasses.swift */,
+				9E592556220350D600185736 /* Season.swift */,
+				02C58BB922259C12003745F1 /* AppModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		02C58BB4222592AF003745F1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		02C58BB5222592BE003745F1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				02C58BB7222593D4003745F1 /* AppController.swift */,
+				02C58BBC2225BD71003745F1 /* SeasonController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		02C58BBB2225A13B003745F1 /* resourses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resourses;
+			sourceTree = "<group>";
+		};
 		9E59251A220345B000185736 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +156,10 @@
 		9E592525220345B000185736 /* 326Spain */ = {
 			isa = PBXGroup;
 			children = (
+				02C58BBB2225A13B003745F1 /* resourses */,
+				02C58BB5222592BE003745F1 /* controller */,
+				02C58BB4222592AF003745F1 /* view */,
+				02C58BB322259296003745F1 /* model */,
 				9E592526220345B000185736 /* AppDelegate.swift */,
 				9E592528220345B000185736 /* ViewController.swift */,
 				9E59252A220345B000185736 /* Main.storyboard */,
@@ -124,8 +167,6 @@
 				9E59252F220345B100185736 /* LaunchScreen.storyboard */,
 				9E592532220345B100185736 /* Info.plist */,
 				9E5925542203472400185736 /* TabBarControllerCustom.swift */,
-				9E592556220350D600185736 /* Season.swift */,
-				9E592558220351B000185736 /* Glasses.swift */,
 				9E59255A2203559200185736 /* TableViewCellCustom.swift */,
 				9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */,
 				9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */,
@@ -288,10 +329,13 @@
 			files = (
 				C17BA307220A182F00A13083 /* TableViewCellSearchCustom.swift in Sources */,
 				9EA0A4932221B4B7001DD9A0 /* CollectionViewCellCustom.swift in Sources */,
+				02C58BBD2225BD71003745F1 /* SeasonController.swift in Sources */,
+				02C58BB8222593D4003745F1 /* AppController.swift in Sources */,
 				9E592557220350D600185736 /* Season.swift in Sources */,
 				9EA0A4952221B61E001DD9A0 /* ViewControllerCustom.swift in Sources */,
 				C17BA305220A158000A13083 /* ViewControllerSearch.swift in Sources */,
 				9ED0451F22035CBD00508558 /* ViewControllerDetail.swift in Sources */,
+				02C58BBA22259C12003745F1 /* AppModel.swift in Sources */,
 				9ED045212203635800508558 /* TableViewCellSeassonCustom.swift in Sources */,
 				9E592529220345B000185736 /* ViewController.swift in Sources */,
 				9E59255B2203559200185736 /* TableViewCellCustom.swift in Sources */,

@@ -100,6 +100,23 @@ class ViewControllerSearch: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         
         searchBar.delegate = self
+        
+        if AppController.appController.favouriteSeasonList.count > 0{
+            for n in 0...AppController.appController.favouriteSeasonList.count - 1{
+                print(AppController.appController.favouriteSeasonList[n].title)
+            }
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        
+        if AppController.appController.favouriteSeasonList.count > 0{
+            for n in 0...AppController.appController.favouriteSeasonList.count - 1{
+                print(AppController.appController.favouriteSeasonList[n].title)
+            }
+        }
     }
     
 

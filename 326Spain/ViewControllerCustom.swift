@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     // lista de gafas generica
@@ -66,8 +66,54 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
         
+      
+        
     }
     
+  
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
+        //return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+         
+         //layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 50, right: 0)
+         //layout.itemSize = CGSize(width: 200, height: 200)
+         layout.minimumInteritemSpacing = 0
+         layout.minimumLineSpacing = 0
+         collectionView.collectionViewLayout = layout
+ 
+        
+       /* let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        collectionView.collectionViewLayout = layout
+        */
+ 
+        let yourWidth = collectionView.bounds.width/3.0 - 2
+        
+        print("pantalla completa",collectionView.bounds.width)
+        print("caga elemento",collectionView.bounds.width/3.0)
+        print(yourWidth)
+        
+        let yourHeight = yourWidth
+        
+       // return CGSize(width: yourWidth, height: yourHeight)
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
 
 
 
