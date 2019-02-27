@@ -11,6 +11,8 @@ import UIKit
 class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
+    @IBOutlet weak var imgRounded: UIImageView!
+    
     // lista de gafas generica
     var gList:[Glasses] = [
         Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
@@ -66,7 +68,11 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
         
-      
+        imgRounded.layer.borderWidth = 1
+        imgRounded.layer.masksToBounds = false
+        //imgRounded.layer.borderColor = UIColor.black.cgColor
+        imgRounded.layer.cornerRadius = imgRounded.frame.height/2
+        imgRounded.clipsToBounds = true
         
     }
     
