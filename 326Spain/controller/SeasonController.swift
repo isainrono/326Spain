@@ -12,17 +12,13 @@ import UIKit
 class SeasonController{
     
     
-    
     // Elimina una season de una lista de Seasons
-    init (){}
-    
     static func deleteSeason(seasonTitle:String){
         
         for n in 0...AppController.appController.favouriteSeasonList.count - 1{
             if AppController.appController.favouriteSeasonList[n].title == seasonTitle {
-                
+                AppController.appController.favouriteSeasonList.remove(at: n)
             }
-            print(AppController.appController.favouriteSeasonList[n].title)
         }
     }
 }

@@ -86,7 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             AppController.appController.favouriteSeasonList.append(seassonList[sender.tag])
         } else {
             sender.setImage(UIImage(named: "uLike"), for: .normal)
-            // Falta eliminara de lista de favoritos
+            SeasonController.deleteSeason(seasonTitle: seassonList[sender.tag].title)
         }
         
         return 1

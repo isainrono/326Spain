@@ -67,13 +67,12 @@ class AppController {
     
     var validate: Bool?
     
-    private init() {}
-    
-    func deleteFavouriteSeason(seasonName:String){
-        for n in 0...favouriteSeasonList.count {
-            
-        }
+    private init() {
     }
+    
+    
+    
+    
     
     
     
