@@ -11,55 +11,9 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewHome: UITableView!
-    // lista de temporadas favoritas
-    var favoriteList:[Season] = [Season]()
-    
-    // lista de gafas generica
-    var gList:[Glasses] = [
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-        ]
-    
-    
-    
+
     // Hago un array de Seasson que apareceran en el tableViewHome
-    var seassonList:[Season] = [
-        Season(title: "Summer", image: UIImage(named:"summer")!, glassesList:[
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-            ]),
-        Season(title: "Winter", image: UIImage(named:"winter")!, glassesList:[
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-            ]),
-        Season(title: "fall", image: UIImage(named:"fall")!, glassesList:[
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-            ]),
-        Season(title: "spring", image: UIImage(named:"spring")!, glassesList:[
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-            Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-            ])
-    ]
+    var seassonList:[Season] = AppController.appController.seasonController.season.seasonList()
     
     // Ahora relleno el tableView con las siguientes funciones
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,7 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if sender.image(for: .normal) == UIImage(named: "uLike") {
             sender.setImage(UIImage(named: "hLike"), for: .normal)
-            favoriteList.append(seassonList[sender.tag])
             AppController.appController.favouriteSeasonList.append(seassonList[sender.tag])
         } else {
             sender.setImage(UIImage(named: "uLike"), for: .normal)
@@ -93,8 +46,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 400
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let seassonDetailView = storyboard?.instantiateViewController(withIdentifier: "seassonDetail") as! ViewControllerDetail

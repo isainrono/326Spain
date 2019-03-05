@@ -13,18 +13,11 @@ class AppController {
     
     static let appController = AppController()
     
-    // Lista Generica de Gafas 326Spain
-    let gList:[Glasses] = [
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-        ]
+    // Controlador Modelo de Gafas
+    var glassesController:GlassesController = GlassesController.init()
+    
+    // Controlador Modelo de Temporadas
+    var seasonController:SeasonController = SeasonController.init()
     
     // Array de Temporadas(Gafas 326Spain)
     var seassonList:[Season] = [

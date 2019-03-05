@@ -14,17 +14,7 @@ class ViewControllerSearch: UIViewController, UITableViewDataSource, UITableView
     var isSearching:Bool = false
     
     // lista de gafas generica
-    var gList:[Glasses] = [
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-        Glasses(name: "barcelona", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-        Glasses(name: "miami", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-        Glasses(name: "londres", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-        Glasses(name: "angles", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-        Glasses(name: "california", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-        Glasses(name: "cancun", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-        Glasses(name: "toronto", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-        ]
+    var gList:[Glasses] = AppController.appController.glassesController.glasses.genericGlassesList()
     
     // Lista de Busqueda por nombre de gafas
     var searchGList:[Glasses] = [Glasses]()
@@ -101,11 +91,6 @@ class ViewControllerSearch: UIViewController, UITableViewDataSource, UITableView
         
         searchBar.delegate = self
         
-        if AppController.appController.favouriteSeasonList.count > 0{
-            for n in 0...AppController.appController.favouriteSeasonList.count - 1{
-                print(AppController.appController.favouriteSeasonList[n].title)
-            }
-        }
         
     }
     

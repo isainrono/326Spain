@@ -23,6 +23,9 @@
 		9E59255B2203559200185736 /* TableViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59255A2203559200185736 /* TableViewCellCustom.swift */; };
 		9EA0A4932221B4B7001DD9A0 /* CollectionViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0A4922221B4B7001DD9A0 /* CollectionViewCellCustom.swift */; };
 		9EA0A4952221B61E001DD9A0 /* ViewControllerCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0A4942221B61E001DD9A0 /* ViewControllerCustom.swift */; };
+		9EC1C12D2227283E00F67E77 /* AccessDivice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1C12C2227283E00F67E77 /* AccessDivice.swift */; };
+		9EC1C12F222729E200F67E77 /* Functionalities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1C12E222729E200F67E77 /* Functionalities.swift */; };
+		9EC1C13122272C7100F67E77 /* GlassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1C13022272C7100F67E77 /* GlassesController.swift */; };
 		9ED0451F22035CBD00508558 /* ViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */; };
 		9ED045212203635800508558 /* TableViewCellSeassonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */; };
 		C17BA305220A158000A13083 /* ViewControllerSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17BA304220A158000A13083 /* ViewControllerSearch.swift */; };
@@ -69,6 +72,9 @@
 		9E59255A2203559200185736 /* TableViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCustom.swift; sourceTree = "<group>"; };
 		9EA0A4922221B4B7001DD9A0 /* CollectionViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCustom.swift; sourceTree = "<group>"; };
 		9EA0A4942221B61E001DD9A0 /* ViewControllerCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCustom.swift; sourceTree = "<group>"; };
+		9EC1C12C2227283E00F67E77 /* AccessDivice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDivice.swift; sourceTree = "<group>"; };
+		9EC1C12E222729E200F67E77 /* Functionalities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionalities.swift; sourceTree = "<group>"; };
+		9EC1C13022272C7100F67E77 /* GlassesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesController.swift; sourceTree = "<group>"; };
 		9ED0451E22035CBD00508558 /* ViewControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDetail.swift; sourceTree = "<group>"; };
 		9ED045202203635800508558 /* TableViewCellSeassonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSeassonCustom.swift; sourceTree = "<group>"; };
 		C17BA304220A158000A13083 /* ViewControllerSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSearch.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			children = (
 				02C58BB7222593D4003745F1 /* AppController.swift */,
 				02C58BBC2225BD71003745F1 /* SeasonController.swift */,
+				9EC1C13022272C7100F67E77 /* GlassesController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 		9E6A2FFB2225EFC300A32361 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				9EC1C12C2227283E00F67E77 /* AccessDivice.swift */,
+				9EC1C12E222729E200F67E77 /* Functionalities.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -336,13 +345,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17BA307220A182F00A13083 /* TableViewCellSearchCustom.swift in Sources */,
+				9EC1C12F222729E200F67E77 /* Functionalities.swift in Sources */,
 				9EA0A4932221B4B7001DD9A0 /* CollectionViewCellCustom.swift in Sources */,
 				02C58BBD2225BD71003745F1 /* SeasonController.swift in Sources */,
+				9EC1C12D2227283E00F67E77 /* AccessDivice.swift in Sources */,
 				02C58BB8222593D4003745F1 /* AppController.swift in Sources */,
 				9E592557220350D600185736 /* Season.swift in Sources */,
 				9EA0A4952221B61E001DD9A0 /* ViewControllerCustom.swift in Sources */,
 				C17BA305220A158000A13083 /* ViewControllerSearch.swift in Sources */,
 				9ED0451F22035CBD00508558 /* ViewControllerDetail.swift in Sources */,
+				9EC1C13122272C7100F67E77 /* GlassesController.swift in Sources */,
 				02C58BBA22259C12003745F1 /* AppModel.swift in Sources */,
 				9ED045212203635800508558 /* TableViewCellSeassonCustom.swift in Sources */,
 				9E592529220345B000185736 /* ViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewControllerDetail: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+
     @IBOutlet weak var tableViewSeasson: UITableView!
     
     @IBOutlet weak var seassonImg: UIImageView!

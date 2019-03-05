@@ -14,26 +14,7 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var imgRounded: UIImageView!
     
     // lista de gafas generica
-    var gList:[Glasses] = [
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain1")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain2")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain3")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain4")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain5")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain6")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain7")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain8")!),
-        Glasses(name: "cali", color: "blue", price: 40, glassImage: UIImage(named:"326Spain9")!),
-        ]
+    var gList:[Glasses] = AppController.appController.glassesController.glasses.genericGlassesList()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gList.count
@@ -67,12 +48,9 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
+
         
-        imgRounded.layer.borderWidth = 1
-        imgRounded.layer.masksToBounds = false
-        //imgRounded.layer.borderColor = UIColor.black.cgColor
-        imgRounded.layer.cornerRadius = imgRounded.frame.height/2
-        imgRounded.clipsToBounds = true
+        Functionalities.convertCirculImage(img: imgRounded)
         
     }
     
