@@ -55,14 +55,27 @@ class ViewControllerSearch: UIViewController, UITableViewDataSource, UITableView
     
     func likedCategory(indexPath:IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "Liked") { (action, view, completion) in
-            self.searchGList[indexPath.row].isLiked = !self.searchGList[indexPath.row].isLiked
-            self.tableView.reloadRows(at: [indexPath], with: .none)
+            
+            if self.isSearching {
+                self.searchGList[indexPath.row].isLiked = !self.searchGList[indexPath.row].isLiked
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            } else {
+                self.gList[indexPath.row].isLiked = !self.gList[indexPath.row].isLiked
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            }
+           
             action.title = "You like this!"
             completion(true)
         }
         
-        action.title = searchGList[indexPath.row].isLiked ? "Dislike" : "Like"
-        action.backgroundColor = searchGList[indexPath.row].isLiked ? UIColor.red : UIColor.green
+        if self.isSearching{
+            action.title = searchGList[indexPath.row].isLiked ? "Dislike" : "Like"
+            action.backgroundColor = searchGList[indexPath.row].isLiked ? UIColor.red : UIColor.green
+        } else {
+            action.title = gList[indexPath.row].isLiked ? "Dislike" : "Like"
+            action.backgroundColor = gList[indexPath.row].isLiked ? UIColor.red : UIColor.green
+        }
+        
         action.image = UIImage(named: "like")
         
         return action

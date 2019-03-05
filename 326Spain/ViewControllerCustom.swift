@@ -13,8 +13,13 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var imgRounded: UIImageView!
     
+    
+    
     // lista de gafas generica
     var gList:[Glasses] = AppController.appController.glassesController.glasses.genericGlassesList()
+    
+    // lista de gafas favoritas
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gList.count
@@ -49,8 +54,11 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
 
-        
+        // Convertir foto de perfil en circulo
         Functionalities.convertCirculImage(img: imgRounded)
+        
+        // recargo la lista de gafas favoritas
+        AppController.appController.favoriteList()
         
     }
     
@@ -88,11 +96,6 @@ class ViewControllerCustom: UIViewController, UICollectionViewDataSource, UIColl
         */
  
         let yourWidth = collectionView.bounds.width/3.0 - 2
-        
-        print("pantalla completa",collectionView.bounds.width)
-        print("caga elemento",collectionView.bounds.width/3.0)
-        print(yourWidth)
-        
         let yourHeight = yourWidth
         
        // return CGSize(width: yourWidth, height: yourHeight)

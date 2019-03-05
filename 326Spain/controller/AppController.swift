@@ -63,6 +63,14 @@ class AppController {
     private init() {
     }
     
+    func favoriteList(){
+        for n in glassesController.glasses.genericGlassesList(){
+            if n.isLiked {
+                favouriteGlassesList.append(n)
+            }
+        }
+    }
+    
     
     
     

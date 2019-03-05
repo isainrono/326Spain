@@ -18,20 +18,24 @@ class TabBarControllerCustom: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.gray], for: .normal)
         
         tabBarItem = self.tabBar.items?[0]
-        tabBarItem.image = UIImage(named: "tab1")?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = UIImage(named:"tab")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.image = UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.selectedImage = UIImage(named:"homeS")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.title = ""
         
         tabBarItem = self.tabBar.items?[1]
-        tabBarItem.image = UIImage(named: "tab2")?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = UIImage(named:"tab")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.image = UIImage(named: "search")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.selectedImage = UIImage(named:"searchS")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.title = ""
         
         tabBarItem = self.tabBar.items?[2]
-        tabBarItem.image = UIImage(named: "tab1")?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = UIImage(named:"tab")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.image = UIImage(named: "user")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.selectedImage = UIImage(named:"userS")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.title = ""
         
         tabBarItem = self.tabBar.items?[3]
-        tabBarItem.image = UIImage(named: "tab2")?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = UIImage(named:"tab")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.image = UIImage(named: "infoS")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.selectedImage = UIImage(named:"info")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.title = ""
         
         for index in 0...tabBar.items!.count - 1{
             tabBarItem = self.tabBar.items?[index]
