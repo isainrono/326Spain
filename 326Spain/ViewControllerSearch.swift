@@ -59,9 +59,11 @@ class ViewControllerSearch: UIViewController, UITableViewDataSource, UITableView
             if self.isSearching {
                 self.searchGList[indexPath.row].isLiked = !self.searchGList[indexPath.row].isLiked
                 self.tableView.reloadRows(at: [indexPath], with: .none)
+                print(indexPath.row)
             } else {
                 self.gList[indexPath.row].isLiked = !self.gList[indexPath.row].isLiked
                 self.tableView.reloadRows(at: [indexPath], with: .none)
+                print(indexPath.row)
             }
            
             action.title = "You like this!"
